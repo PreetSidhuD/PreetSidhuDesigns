@@ -77,6 +77,33 @@ const services = [
   },
 ];
 
+const whoThisIsFor = [
+  {
+    title: "Tradespeople & Contractors",
+    text: "You're booked through word of mouth and referrals, but your website, branding, and online presence don't yet reflect the quality of your work — or show up when people search for you.",
+  },
+  {
+    title: "Restaurants, Cafes & Food Businesses",
+    text: "Your food and service are the draw. Your branding, menus, signage, and social media should make people want to walk in before they've even tasted anything.",
+  },
+  {
+    title: "Clinics, Salons & Wellness Businesses",
+    text: "People decide whether to trust you before they ever book — based on your website, your branding, and how you show up online.",
+  },
+  {
+    title: "Retail Shops & E-commerce",
+    text: "Compete with bigger chains by looking just as polished and professional, with branding and a website that make your products the obvious choice.",
+  },
+  {
+    title: "Real Estate & Property Businesses",
+    text: "Stand out in a crowded market with branding, listings, and a web presence that signal credibility the moment someone finds you.",
+  },
+  {
+    title: "Professional & Local Service Businesses",
+    text: "Look as established and trustworthy as the advice and service you provide — both online and in person.",
+  },
+];
+
 const steps = [
   {
     number: "01",
@@ -320,20 +347,19 @@ export default function Home() {
           </Reveal>
           <Reveal delay={120} className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-card)] p-8">
             <h3 className="text-xl font-bold">Who This Is For</h3>
-            <div className="mt-6 grid grid-cols-2 gap-4">
-              {[
-                "Tradespeople & Contractors",
-                "Restaurants & Cafes",
-                "Clinics & Wellness",
-                "Retail & E-commerce",
-                "Real Estate & Property",
-                "Professional Services",
-              ].map((item) => (
+            <p className="mt-2 text-sm text-[var(--color-text-muted)]">
+              Small business owners who are great at what they do, but feel
+              like their branding, website, or online presence isn&rsquo;t
+              keeping up.
+            </p>
+            <div className="mt-6 space-y-3">
+              {whoThisIsFor.map((item) => (
                 <div
-                  key={item}
-                  className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] p-4 text-sm font-semibold transition-colors hover:border-[var(--color-primary)]"
+                  key={item.title}
+                  className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] p-4 transition-colors hover:border-[var(--color-primary)]"
                 >
-                  {item}
+                  <p className="text-sm font-bold">{item.title}</p>
+                  <p className="mt-1 text-sm text-[var(--color-text-muted)]">{item.text}</p>
                 </div>
               ))}
             </div>
