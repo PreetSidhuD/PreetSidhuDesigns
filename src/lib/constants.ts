@@ -80,5 +80,6 @@ export const NAV_LINKS = [
   { href: "/branding", label: "Branding" },
   { href: "/web-design", label: "Web Design" },
   { href: "/marketing", label: "Marketing" },
+  { href: "/print-signage", label: "Print & Signage" },
   { href: "/about", label: "About" },
 ];

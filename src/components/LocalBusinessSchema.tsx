@@ -57,7 +57,7 @@ export default function LocalBusinessSchema() {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Signage & Print Design",
+          name: "Print & Signage Products",
         },
       },
       {

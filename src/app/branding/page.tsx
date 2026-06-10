@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CheckCircle2, Palette, Award, Truck, Megaphone } from "lucide-react";
 import Section from "@/components/Section";
 import CTAButton from "@/components/CTAButton";
@@ -22,6 +23,7 @@ const included = [
     icon: Award,
     title: "Signage & Print Design",
     text: "Print-ready files for storefront signage, business cards, banners, and packaging — designed to match your brand and ready for the printer.",
+    href: "/print-signage",
   },
   {
     icon: Truck,
@@ -98,6 +100,14 @@ export default function BrandingPage() {
               </div>
               <h3 className="mt-5 text-lg font-bold">{item.title}</h3>
               <p className="mt-2 text-sm text-[var(--color-text-muted)]">{item.text}</p>
+              {item.href && (
+                <Link
+                  href={item.href}
+                  className="mt-4 inline-block text-sm font-bold text-[var(--color-primary)]"
+                >
+                  View print &amp; signage &rarr;
+                </Link>
+              )}
             </div>
           ))}
         </div>
