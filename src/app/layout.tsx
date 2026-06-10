@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME} | Branding, Web Design & Marketing Agency in Edmonton`,
     description:
-      "Get a free 15-minute Business Visibility Review. We help Canadian small businesses with branding, websites, and marketing that actually bring in customers.",
+      "Branding, websites, and marketing for Canadian small businesses — built to bring in customers. Start with a free 15-minute Business Visibility Review.",
     images: [
       {
         url: "/og-image.jpg",

@@ -39,22 +39,22 @@ const faqItems = [
   {
     question: "Why isn't my current website showing up on Google?",
     answer:
-      "There are a few common reasons: the site was never properly indexed, it's missing basic SEO elements (titles, descriptions, headings), it loads too slowly, it isn't mobile-friendly, or it lacks the local information (city, services, Google Business Profile) that Google uses to match your business to local searches. We diagnose this for free in your Business Visibility Review.",
+      "There are a few common reasons: the site was never properly indexed, it's missing basic SEO elements (titles, descriptions, headings), it loads too slowly, it isn't mobile-friendly, or it lacks the local information (city, services, Google Business Profile) that Google uses to match your business to local searches. This gets diagnosed for free in your Business Visibility Review.",
   },
   {
     question: "Will my new website actually rank on Google?",
     answer:
-      "Every website we build starts with the technical SEO foundations Google looks for: fast load times, mobile optimization, proper page structure, sitemaps, and local business schema. Combined with the right content and keywords for your city and services, this gives you a real shot at ranking — though SEO is ongoing, not a one-time switch.",
+      "Every website starts with the technical SEO foundations Google looks for: fast load times, mobile optimization, proper page structure, sitemaps, and local business schema. Combined with the right content and keywords for your city and services, this gives you a real shot at ranking — though SEO is ongoing, not a one-time switch.",
   },
   {
     question: "Can I update the website myself after it's built?",
     answer:
-      "Yes. We build sites so you (or anyone on your team) can update text, images, and basic content without needing to know how to code.",
+      "Yes. Sites are built so you (or anyone on your team) can update text, images, and basic content without needing to know how to code.",
   },
   {
     question: "Do you build e-commerce or booking websites?",
     answer:
-      "Yes — from simple brochure-style sites to e-commerce stores and websites with built-in booking and scheduling, we build what fits your business and budget.",
+      "Yes — from simple brochure-style sites to e-commerce stores and websites with built-in booking and scheduling, the build is matched to your business and budget.",
   },
 ];
 
@@ -118,10 +118,10 @@ export default function WebDesignPage() {
             </p>
             <ul className="mt-6 space-y-3">
               {[
-                "We submit your site to Google Search Console for indexing",
-                "We connect and optimize your Google Business Profile",
-                "We write page titles & descriptions targeting your city + service",
-                "We make sure your site loads fast on mobile devices",
+                "Your site gets submitted to Google Search Console for indexing",
+                "Your Google Business Profile gets connected and optimized",
+                "Page titles & descriptions are written to target your city + service",
+                "Your site is built and tested to load fast on mobile devices",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[var(--color-primary)]" />

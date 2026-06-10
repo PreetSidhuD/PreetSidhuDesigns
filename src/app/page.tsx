@@ -78,22 +78,22 @@ const steps = [
   {
     number: "01",
     title: "Free 15-Minute Visibility Review",
-    text: "We look at your branding, website, signage, and online presence — then hand you 3 practical improvements you can use immediately.",
+    text: "A look at your branding, website, signage, and online presence — followed by 3 practical improvements you can use immediately.",
   },
   {
     number: "02",
     title: "Custom Plan",
-    text: "If it's a fit, we map out exactly what your business needs — branding, website, marketing, or all three — with clear pricing and timelines.",
+    text: "If it's a fit, you'll get a clear plan for exactly what your business needs — branding, website, marketing, or all three — with honest pricing and timelines.",
   },
   {
     number: "03",
-    title: "We Build & Launch",
-    text: "Our team designs, builds, and launches your new brand, website, or campaigns — keeping you informed at every step.",
+    title: "Design & Build",
+    text: "Your new brand, website, or campaigns get designed, built, and launched — with regular updates so you're never left wondering what's happening.",
   },
   {
     number: "04",
     title: "Grow & Get Found",
-    text: "We help you show up on Google, attract the right customers, and keep improving your results over time.",
+    text: "From there, it's about helping you show up on Google, attract the right customers, and keep improving results over time.",
   },
 ];
 
@@ -106,22 +106,22 @@ const faqItems = [
   {
     question: "Do you only work with businesses in Edmonton?",
     answer:
-      "We're based in Edmonton, Alberta, but we work with small businesses across Canada. Everything — from branding to web design to marketing strategy — is delivered remotely with video calls, so location is never a barrier.",
+      "PreetSidhuDesigns is based in Edmonton, Alberta, and works with small businesses across Canada. Everything — from branding to web design to marketing strategy — is delivered remotely with video calls, so location is never a barrier.",
   },
   {
     question: "What's included in the free Business Visibility Review?",
     answer:
-      "In 15 minutes, we'll review your current branding, website, signage, and online presence (Google Business Profile, social media, etc.) and give you 3 specific, practical improvements you can act on — whether or not you decide to work with us.",
+      "In 15 minutes, your current branding, website, signage, and online presence (Google Business Profile, social media, etc.) get reviewed, and you'll walk away with 3 specific, practical improvements you can act on — whether or not you decide to move forward.",
   },
   {
     question: "How long does it take to build a website?",
     answer:
-      "Most small business websites take 2–4 weeks from kickoff to launch, depending on the number of pages and how quickly we receive content and feedback. Larger projects with custom features may take longer — we'll give you a clear timeline before we start.",
+      "Most small business websites take 2–4 weeks from kickoff to launch, depending on the number of pages and how quickly content and feedback come back. Larger projects with custom features may take longer — you'll get a clear timeline before anything starts.",
   },
   {
     question: "Can you help my business show up higher on Google?",
     answer:
-      "Yes. Every website we build is optimized for local search from the ground up — including Google Business Profile setup, location-based keywords, fast loading speeds, and mobile optimization — so customers searching for your services nearby can actually find you.",
+      "Yes. Every website is optimized for local search from the ground up — including Google Business Profile setup, location-based keywords, fast loading speeds, and mobile optimization — so customers searching for your services nearby can actually find you.",
   },
 ];
 
@@ -152,7 +152,7 @@ export default function Home() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <CTAButton href="/booking">Book My Free Review</CTAButton>
               <CTAButton href="/branding" variant="outline">
-                See Our Services
+                Explore the Services
               </CTAButton>
             </div>
             <p className="mt-6 text-sm text-[var(--color-text-muted)]">
@@ -257,11 +257,11 @@ export default function Home() {
               <span className="text-gradient">Clients Across Canada.</span>
             </h2>
             <p className="mt-4 text-[var(--color-text-muted)]">
-              We&rsquo;re a small, hands-on design and marketing studio based
-              in Edmonton, Alberta. We work with tradespeople, restaurants,
-              clinics, retail shops, and service businesses across Canada who
-              are tired of being invisible online and ready to look like the
-              go-to choice in their industry.
+              PreetSidhuDesigns is a one-person, hands-on design and marketing
+              studio based in Edmonton, Alberta — working with tradespeople,
+              restaurants, clinics, retail shops, and service businesses
+              across Canada who are tired of being invisible online and ready
+              to look like the go-to choice in their industry.
             </p>
             <ul className="mt-6 space-y-3">
               {[
@@ -277,11 +277,11 @@ export default function Home() {
               ))}
             </ul>
             <div className="mt-8">
-              <CTAButton href="/about">More About Us</CTAButton>
+              <CTAButton href="/about">More About PreetSidhuDesigns</CTAButton>
             </div>
           </div>
           <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-card)] p-8">
-            <h3 className="text-xl font-bold">Who We Help</h3>
+            <h3 className="text-xl font-bold">Who This Is For</h3>
             <div className="mt-6 grid grid-cols-2 gap-4">
               {[
                 "Tradespeople & Contractors",

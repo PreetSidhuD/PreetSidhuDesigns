@@ -44,17 +44,17 @@ const faqItems = [
   {
     question: "I already have a logo. Do I need a full rebrand?",
     answer:
-      "Not always. In your free Business Visibility Review, we'll look at your current branding and tell you honestly whether a small refresh (colors, fonts, consistency) is enough, or whether a full rebrand would serve you better.",
+      "Not always. In your free Business Visibility Review, your current branding gets an honest look — to figure out whether a small refresh (colors, fonts, consistency) is enough, or whether a full rebrand would serve you better.",
   },
   {
     question: "How long does a branding project take?",
     answer:
-      "A logo and brand identity package typically takes 1–3 weeks, depending on the number of revisions and how quickly we get feedback from you.",
+      "A logo and brand identity package typically takes 1–3 weeks, depending on the number of revisions and how quickly feedback comes back.",
   },
   {
     question: "Do you design signage and print materials too?",
     answer:
-      "Yes. We design business cards, vehicle decals, storefront signage, packaging, and other print materials — all matched to your brand identity and ready to send to a printer.",
+      "Yes — business cards, vehicle decals, storefront signage, packaging, and other print materials, all matched to your brand identity and ready to send to a printer.",
   },
 ];
 

@@ -7,7 +7,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Book Your Free 15-Minute Business Visibility Review",
   description:
-    "Book a free 15-minute Business Visibility Review with PreetSidhuDesigns. We'll review your branding, website, and online presence and give you 3 practical improvements.",
+    "Book a free 15-minute Business Visibility Review with PreetSidhuDesigns. Get your branding, website, and online presence reviewed and 3 practical improvements.",
   alternates: { canonical: "/booking" },
 };
 
@@ -46,10 +46,10 @@ export default function BookingPage() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 lg:grid-cols-2">
           {/* Quick form */}
           <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-card)] p-6 sm:p-8">
-            <h2 className="text-xl font-bold">Tell Us About Your Business</h2>
+            <h2 className="text-xl font-bold">Tell Me About Your Business</h2>
             <p className="mt-2 text-sm text-[var(--color-text-muted)]">
-              Takes less than a minute. We&rsquo;ll use this to prep for your
-              free review.
+              Takes less than a minute, and helps make sure your free review
+              is useful from the first second.
             </p>
             <form
               action={BUSINESS.formEndpoint}

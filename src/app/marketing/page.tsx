@@ -39,7 +39,7 @@ const faqItems = [
   {
     question: "How often should my business post on social media?",
     answer:
-      "Consistency matters more than frequency. For most small businesses, 3–5 posts per week of useful, relevant content outperforms daily posting that's random or off-brand. We build a content calendar based on what your audience actually responds to.",
+      "Consistency matters more than frequency. For most small businesses, 3–5 posts per week of useful, relevant content outperforms daily posting that's random or off-brand. A content calendar gets built around what your audience actually responds to.",
   },
   {
     question: "Will social media marketing help my Google ranking?",
@@ -49,12 +49,12 @@ const faqItems = [
   {
     question: "I don't have time to manage social media. Can you handle everything?",
     answer:
-      "Yes. We can take social media off your plate completely — from content creation and design to scheduling and posting — so you can focus on running your business.",
+      "Yes. Social media can be taken off your plate completely — from content creation and design to scheduling and posting — so you can focus on running your business.",
   },
   {
     question: "Do you run paid ads (Google Ads, Facebook Ads)?",
     answer:
-      "Yes, we set up and manage targeted ad campaigns designed around your budget and goals, whether that's local awareness in Edmonton or reaching customers across Canada.",
+      "Yes — targeted ad campaigns get set up and managed around your budget and goals, whether that's local awareness in Edmonton or reaching customers across Canada.",
   },
 ];
 
