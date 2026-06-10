@@ -39,8 +39,9 @@ export default function Footer() {
           <div>
             <Logo />
             <p className="mt-4 max-w-xs text-sm text-[var(--color-text-muted)]">
-              Branding, web design, and marketing strategy for small
-              businesses in Edmonton and across Canada.
+              Creative branding, websites, social media, signage, and
+              marketing solutions designed to help businesses look
+              professional, build trust, and grow with confidence.
             </p>
             <div className="mt-5 flex gap-4">
               <a

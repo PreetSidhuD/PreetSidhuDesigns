@@ -11,11 +11,13 @@ import {
   TrendingUp,
   CheckCircle2,
   MapPin,
+  Star,
 } from "lucide-react";
 import Section from "@/components/Section";
 import CTAButton from "@/components/CTAButton";
 import FAQAccordion from "@/components/FAQAccordion";
 import FAQSchema from "@/components/FAQSchema";
+import { CLIENTS, TESTIMONIALS } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Branding, Web Design & Marketing Agency in Edmonton | Free Visibility Review",
@@ -162,6 +164,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TRUSTED BY */}
+      <Section className="border-b border-[var(--color-border)] !py-10">
+        <p className="text-center text-xs font-bold uppercase tracking-widest text-[var(--color-text-muted)]">
+          Trusted By Businesses Across Canada
+        </p>
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+          {CLIENTS.map((client) => (
+            <span
+              key={client}
+              className="text-sm font-bold text-[var(--color-text-muted)]/70"
+            >
+              {client}
+            </span>
+          ))}
+        </div>
+      </Section>
+
       {/* PAIN POINTS */}
       <Section className="border-b border-[var(--color-border)]">
         <div className="mx-auto max-w-3xl text-center">
@@ -307,35 +326,21 @@ export default function Home() {
       <Section className="border-b border-[var(--color-border)] bg-[var(--color-bg-soft)]">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-            What Business Owners Say
+            What Clients Say
           </h2>
         </div>
         <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
-          {[
-            {
-              quote:
-                "The free review alone gave us more useful feedback than the last agency we paid for. Our new site has already brought in new customers from Google.",
-              name: "Local Business Owner",
-              location: "Edmonton, AB",
-            },
-            {
-              quote:
-                "Our branding finally feels consistent across our signage, website, and social media. People take us more seriously now.",
-              name: "Service Business Owner",
-              location: "Calgary, AB",
-            },
-            {
-              quote:
-                "We went from invisible on Google to showing up on the first page for our main service. The whole process was simple and clearly explained.",
-              name: "Small Business Owner",
-              location: "Toronto, ON",
-            },
-          ].map((t) => (
+          {TESTIMONIALS.map((t) => (
             <div
               key={t.name}
               className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-card)] p-6"
             >
-              <p className="text-sm text-[var(--color-text-muted)]">&ldquo;{t.quote}&rdquo;</p>
+              <div className="flex gap-0.5 text-[var(--color-primary)]">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-current" />
+                ))}
+              </div>
+              <p className="mt-3 text-sm text-[var(--color-text-muted)]">&ldquo;{t.quote}&rdquo;</p>
               <p className="mt-4 text-sm font-bold">{t.name}</p>
               <p className="text-xs text-[var(--color-text-muted)]">{t.location}</p>
             </div>

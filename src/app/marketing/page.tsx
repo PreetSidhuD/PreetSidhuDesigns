@@ -15,23 +15,23 @@ export const metadata: Metadata = {
 const included = [
   {
     icon: Megaphone,
-    title: "Social Media Management",
+    title: "Social Media Marketing",
     text: "Consistent, on-brand content for Instagram, Facebook, and other platforms — planned, designed, and posted for you.",
   },
   {
     icon: Target,
-    title: "Marketing Strategy",
-    text: "A practical plan that connects your branding, website, and social media so every piece of marketing works toward the same goal.",
+    title: "Content Creation & Visual Design",
+    text: "Photos, graphics, and visuals built around your brand — for social media, your website, and marketing materials.",
   },
   {
     icon: BarChart3,
-    title: "Local & Online Ads",
-    text: "Targeted ad campaigns built to reach the right customers in your city — and across Canada if you're ready to scale.",
+    title: "Promotional & Advertising Design",
+    text: "Targeted ad creative and promotional graphics built to reach the right customers in your city — and across Canada if you're ready to scale.",
   },
   {
     icon: Calendar,
-    title: "Content Calendars",
-    text: "A clear content plan so you always know what's being posted, when, and why — no more last-minute scrambling.",
+    title: "Digital Marketing Support",
+    text: "Ongoing support for your content calendar, online presence, and campaigns — so you always know what's being posted, when, and why.",
   },
 ];
 

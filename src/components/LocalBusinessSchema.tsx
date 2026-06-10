@@ -50,14 +50,28 @@ export default function LocalBusinessSchema() {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Social Media & Digital Marketing",
+          name: "Social Media Marketing",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Brand & Marketing Strategy",
+          name: "Signage & Print Design",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Vehicle Graphics & Storefront Branding",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Promotional & Advertising Design",
         },
       },
     ],

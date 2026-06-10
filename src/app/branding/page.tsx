@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CheckCircle2, Palette, Award, Layers, FileText } from "lucide-react";
+import { CheckCircle2, Palette, Award, Truck, Megaphone } from "lucide-react";
 import Section from "@/components/Section";
 import CTAButton from "@/components/CTAButton";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -19,19 +19,19 @@ const included = [
     text: "A custom, memorable logo that works everywhere — your website, signage, vehicles, packaging, and social media.",
   },
   {
-    icon: Layers,
-    title: "Brand Colors & Fonts",
-    text: "A consistent color palette and typography system so your business looks the same — and looks professional — everywhere it appears.",
-  },
-  {
-    icon: FileText,
-    title: "Brand Guidelines",
-    text: "A simple guide your whole team (and any future designer or printer) can follow, so your branding never goes off-track.",
-  },
-  {
     icon: Award,
-    title: "Signage & Print-Ready Files",
-    text: "Print-ready files for signage, business cards, vehicle wraps, and packaging — done right the first time.",
+    title: "Signage & Print Design",
+    text: "Print-ready files for storefront signage, business cards, banners, and packaging — designed to match your brand and ready for the printer.",
+  },
+  {
+    icon: Truck,
+    title: "Vehicle Graphics & Storefront Branding",
+    text: "Vehicle decals and wraps, window graphics, and storefront branding that turn your shop or fleet into moving advertising.",
+  },
+  {
+    icon: Megaphone,
+    title: "Promotional Graphics & Marketing Materials",
+    text: "Flyers, brochures, posters, and promotional graphics for sales, events, and campaigns — all consistent with your brand identity.",
   },
 ];
 
