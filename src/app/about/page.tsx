@@ -2,17 +2,37 @@ import type { Metadata } from "next";
 import Section from "@/components/Section";
 import CTAButton from "@/components/CTAButton";
 import { CheckCircle2 } from "lucide-react";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import { SITE_URL, SITE_NAME } from "@/lib/constants";
+
+const PAGE_TITLE = "About | Edmonton Branding & Web Design Studio";
+const PAGE_DESCRIPTION =
+  "PreetSidhuDesigns is an independent Edmonton-based branding, web design, and marketing studio helping small businesses across Canada look credible and get found online.";
 
 export const metadata: Metadata = {
-  title: "About | Edmonton Branding & Web Design Studio",
-  description:
-    "PreetSidhuDesigns is an independent Edmonton-based branding, web design, and marketing studio helping small businesses across Canada look credible and get found online.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   alternates: { canonical: "/about" },
+  openGraph: {
+    type: "website",
+    url: `${SITE_URL}/about`,
+    siteName: SITE_NAME,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: SITE_NAME }],
+  },
+  twitter: {
+    card: "summary",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [`${SITE_URL}/logo.png`],
+  },
 };
 
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbSchema crumbs={[{ name: "About", href: "/about" }]} />
       <section className="border-b border-[var(--color-border)]">
         <div className="mx-auto max-w-3xl px-5 py-16 text-center sm:px-8 sm:py-24">
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">

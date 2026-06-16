@@ -5,12 +5,31 @@ import Section from "@/components/Section";
 import CTAButton from "@/components/CTAButton";
 import FAQAccordion from "@/components/FAQAccordion";
 import FAQSchema from "@/components/FAQSchema";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import { SITE_URL, SITE_NAME } from "@/lib/constants";
+
+const PAGE_TITLE = "Branding Agency in Edmonton | Logo & Brand Identity Design";
+const PAGE_DESCRIPTION =
+  "Professional branding and logo design for small businesses in Edmonton and across Canada. Stand out, build trust, and look like the go-to choice in your industry.";
 
 export const metadata: Metadata = {
-  title: "Branding Agency in Edmonton | Logo & Brand Identity Design",
-  description:
-    "Professional branding and logo design for small businesses in Edmonton and across Canada. Stand out, build trust, and look like the go-to choice in your industry.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   alternates: { canonical: "/branding" },
+  openGraph: {
+    type: "website",
+    url: `${SITE_URL}/branding`,
+    siteName: SITE_NAME,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [{ url: `${SITE_URL}/logo.png`, width: 512, height: 512, alt: SITE_NAME }],
+  },
+  twitter: {
+    card: "summary",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [`${SITE_URL}/logo.png`],
+  },
 };
 
 const included = [
@@ -63,6 +82,7 @@ const faqItems = [
 export default function BrandingPage() {
   return (
     <>
+      <BreadcrumbSchema crumbs={[{ name: "Branding", href: "/branding" }]} />
       <section className="border-b border-[var(--color-border)]">
         <div className="mx-auto max-w-3xl px-5 py-16 text-center sm:px-8 sm:py-24">
           <span className="inline-flex items-center rounded-full border border-[var(--color-border)] bg-[var(--color-bg-card)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[var(--color-primary)]">

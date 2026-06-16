@@ -5,7 +5,10 @@ export default function LocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: BUSINESS.name,
-    image: `${SITE_URL}/og-image.jpg`,
+    description:
+      "Edmonton-based branding, website design, and marketing agency helping small businesses across Canada look credible, get found on Google, and win more customers.",
+    logo: `${SITE_URL}/logo.png`,
+    image: `${SITE_URL}/logo.png`,
     "@id": SITE_URL,
     url: SITE_URL,
     telephone: BUSINESS.phone,
@@ -22,6 +25,14 @@ export default function LocalBusinessSchema() {
       latitude: 53.5461,
       longitude: -113.4938,
     },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "18:00",
+      },
+    ],
     areaServed: {
       "@type": "Country",
       name: "Canada",
