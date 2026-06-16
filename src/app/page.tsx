@@ -13,12 +13,31 @@ import {
   MapPin,
   Star,
 } from "lucide-react";
+import Image from "next/image";
 import Section from "@/components/Section";
 import CTAButton from "@/components/CTAButton";
 import FAQAccordion from "@/components/FAQAccordion";
 import FAQSchema from "@/components/FAQSchema";
 import Reveal from "@/components/Reveal";
-import { CLIENTS, TESTIMONIALS } from "@/lib/constants";
+import CycleWords from "@/components/CycleWords";
+import StatCounter from "@/components/StatCounter";
+import { TESTIMONIALS } from "@/lib/constants";
+
+const CLIENT_LOGOS = [
+  "clients-logo-01.png",
+  "clients-logo-02.png",
+  "clients-logo-04.png",
+  "clients-logo-09.png",
+  "clients-logo-12.png",
+  "clients-logo-13.png",
+  "clients-logo-15.png",
+  "clients-logo-17.png",
+  "clients-logo-18.png",
+  "clients-logo-19.png",
+  "clients-logo-20.png",
+  "clients-logo-24.png",
+  "untitled-13.png",
+];
 
 export const metadata: Metadata = {
   title: "Branding, Web Design & Marketing Agency in Edmonton | Free Visibility Review",
@@ -160,38 +179,56 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-[var(--color-border)]">
+        {/* Aurora blobs */}
         <div
-          className="animate-blob pointer-events-none absolute -top-40 right-[-10%] h-[28rem] w-[28rem] rounded-full opacity-30 blur-3xl"
-          style={{ background: "radial-gradient(circle, var(--color-primary), transparent 70%)" }}
+          className="animate-aurora-1 pointer-events-none absolute -top-48 right-[-5%] h-[36rem] w-[36rem] rounded-full opacity-35 blur-[80px]"
+          style={{ background: "radial-gradient(circle, #ff4a17, #ff8a4c 40%, transparent 70%)" }}
         />
         <div
-          className="animate-blob-slow pointer-events-none absolute -bottom-48 left-[-15%] h-[32rem] w-[32rem] rounded-full opacity-20 blur-3xl"
-          style={{ background: "radial-gradient(circle, var(--color-primary-dark), transparent 70%)" }}
+          className="animate-aurora-2 pointer-events-none absolute -bottom-32 left-[-10%] h-[40rem] w-[40rem] rounded-full opacity-20 blur-[100px]"
+          style={{ background: "radial-gradient(circle, #d43a0f, #ff4a17 40%, transparent 70%)" }}
         />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,var(--color-border)_1px,transparent_0)] bg-[length:32px_32px] opacity-20" />
+        <div
+          className="animate-aurora-3 pointer-events-none absolute top-1/3 left-1/3 h-[24rem] w-[24rem] rounded-full opacity-15 blur-[80px]"
+          style={{ background: "radial-gradient(circle, #ff6b35, transparent 70%)" }}
+        />
+        {/* Dot grid */}
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,var(--color-border)_1px,transparent_0)] bg-[length:28px_28px] opacity-25" />
+        {/* Shimmer line */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div
+            className="animate-shimmer absolute top-0 h-full w-[3px] bg-gradient-to-b from-transparent via-[var(--color-primary)]/30 to-transparent"
+          />
+        </div>
+
         <div className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:py-36">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="animate-float-slow inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-card)] px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[var(--color-primary)]">
+            <span className="animate-float-slow inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-card)]/80 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[var(--color-primary)] backdrop-blur-sm">
               <MapPin className="h-3.5 w-3.5" />
               Edmonton-Based &middot; Serving All of Canada
             </span>
             <h1 className="reveal is-visible mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
               Get a Free 15-Minute{" "}
-              <span className="text-gradient animate-gradient bg-clip-text">Business Visibility Review</span>
+              <span className="text-gradient animate-gradient">Business Visibility Review</span>
             </h1>
             <p
               className="reveal is-visible mx-auto mt-6 max-w-2xl text-lg text-[var(--color-text-muted)] sm:text-xl"
               style={{ animationDelay: "120ms" }}
             >
-              I&rsquo;ll review your branding, website, signage, and online
-              presence and give you 3 practical improvements — free, no
-              obligation.
+              I&rsquo;ll review your{" "}
+              <CycleWords />{" "}
+              and give you 3 practical improvements your business can act on — free, no obligation.
             </p>
             <div
               className="reveal is-visible mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
               style={{ animationDelay: "240ms" }}
             >
-              <CTAButton href="/booking">Book My Free Review</CTAButton>
+              <div className="relative">
+                <div className="animate-shimmer pointer-events-none absolute inset-0 overflow-hidden rounded-full">
+                  <div className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+                </div>
+                <CTAButton href="/booking">Book My Free Review</CTAButton>
+              </div>
               <CTAButton href="/branding" variant="outline">
                 Explore the Services
               </CTAButton>
@@ -200,7 +237,7 @@ export default function Home() {
               className="reveal is-visible mt-6 text-sm text-[var(--color-text-muted)]"
               style={{ animationDelay: "360ms" }}
             >
-              Branding &middot; Websites &middot; Social Media &middot; Marketing Strategy
+              Branding &middot; Websites &middot; Social Media &middot; Print &amp; Signage
             </p>
           </div>
         </div>
@@ -209,17 +246,20 @@ export default function Home() {
       {/* TRUSTED BY */}
       <Section className="border-b border-[var(--color-border)] !py-10 overflow-hidden">
         <p className="text-center text-xs font-bold uppercase tracking-widest text-[var(--color-text-muted)]">
-          Trusted By Businesses Across Canada
+          Brands We&rsquo;ve Built For
         </p>
-        <div className="mt-6 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div className="mt-8 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
           <div className="animate-marquee flex w-max items-center gap-x-12">
-            {[...CLIENTS, ...CLIENTS].map((client, i) => (
-              <span
-                key={`${client}-${i}`}
-                className="whitespace-nowrap text-sm font-bold text-[var(--color-text-muted)]/70"
-              >
-                {client}
-              </span>
+            {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((logo, i) => (
+              <div key={`${logo}-${i}`} className="flex h-14 w-28 flex-shrink-0 items-center justify-center">
+                <Image
+                  src={`/clients/${logo}`}
+                  alt="Client logo"
+                  width={112}
+                  height={56}
+                  className="max-h-12 w-auto object-contain opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+                />
+              </div>
             ))}
           </div>
         </div>
@@ -345,25 +385,18 @@ export default function Home() {
               <CTAButton href="/about">More About PreetSidhuDesigns</CTAButton>
             </div>
           </Reveal>
-          <Reveal delay={120} className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-card)] p-8">
-            <h3 className="text-xl font-bold">Who This Is For</h3>
-            <p className="mt-2 text-sm text-[var(--color-text-muted)]">
-              Small business owners who are great at what they do, but feel
-              like their branding, website, or online presence isn&rsquo;t
-              keeping up.
-            </p>
-            <div className="mt-6 space-y-3">
-              {whoThisIsFor.map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] p-4 transition-colors hover:border-[var(--color-primary)]"
-                >
-                  <p className="text-sm font-bold">{item.title}</p>
-                  <p className="mt-1 text-sm text-[var(--color-text-muted)]">{item.text}</p>
-                </div>
-              ))}
+          <div className="relative overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-card)] p-8">
+            <div
+              className="animate-aurora-2 pointer-events-none absolute -top-20 -right-20 h-60 w-60 rounded-full opacity-15 blur-3xl"
+              style={{ background: "radial-gradient(circle, var(--color-primary), transparent 70%)" }}
+            />
+            <div className="relative grid grid-cols-2 gap-8">
+              <StatCounter end={50} suffix="+" label="Brands Built" sub="Across every industry" />
+              <StatCounter end={100} suffix="+" label="Projects Delivered" sub="On time, on brand" />
+              <StatCounter end={5} suffix="+" label="Years of Experience" sub="Design & marketing" />
+              <StatCounter end={10} suffix="+" label="Provinces Served" sub="Coast to coast" />
             </div>
-          </Reveal>
+          </div>
         </div>
       </Section>
 
